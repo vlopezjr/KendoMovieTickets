@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+	<link href="styles/main.css" rel="stylesheet" />
+    <style>
+        #tabstrip-inicio .km-content {
+            background-image: url('images/cs-home.jpg');
+            background-size: auto 100%;
+            background-repeat: repeat;
+            
+        }
+
+        .no-backbutton .km-back {
+            visibility: hidden;
+        }
+    </style>
+	<script src="cordova.js"></script>
+	<script src="kendo/js/jquery.min.js"></script>
+	<script src="kendo/js/kendo.mobile.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+
+	
+	<script src="scripts/app.js"></script>
+
+</head>
+<body>
+	<!--Home-->
+    <div id="mt-home-main-view" data-role="view" data-title="Movie Tickets" data-layout="mt-main-layout" data-show="homeViewInit">
+        Home Page View
+    </div>
+
+    <!--About-->
+    <!-- about view -->
+    <div data-role="view" id="mt-about-view" data-title="About" data-layout="mt-main-layout">
+        <div style="padding: 15px">
+            This is a sample application developed for the book
+            Building Mobile Applications using Kendo UI Mobile and ASP.NET Web API
+        </div>
+    </div>
+
+    <!--Trailers-->
+    <div data-role="view" data-title="Trailers" data-layout="mt-main-layout" id="mt-trailers-view">
+    </div>
+
+	<!--Layout-->
+    <div data-role="layout" data-id="mt-main-layout">
+
+        <!--Header-->
+        <div data-role="header">
+            <div data-role="navbar" >
+                <a data-align="left" data-role="backbutton">Back</a>
+                <span data-role="view-title">Movie Tickets</span>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div data-role="footer">
+            <div data-role="tabstrip">
+                <a href="#mt-home-main-view" data-icon="home">Home</a>
+                <a href="#mt-about-view" data-icon="about">About</a>
+                <a href="#mt-trailers-view" data-icon="contacts">Trailers</a>
+                <a href="#tabstrip-fotos" data-icon="search">FOTOS</a>
+                <a href="#tabstrip-eventos" data-icon="globe">EVENTOS</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
