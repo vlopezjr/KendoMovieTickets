@@ -46,5 +46,70 @@ namespace KendoMovieTickets.WebAPI.BLL
                 }
             };
         }
+
+        public static UserBO GetUserDetails(string userName)
+        {
+            var usersList = new List<UserBO>
+            {
+                new UserBO() {
+                    Address = "123 North Field Pkwy, Buffalo Grove, Illinois",
+                    EmailId = "alison.massey@email.com",
+                    FirstName = "Alison",
+                    LastName = "Massey",
+                    UserName = "username1",
+                    SubscribedForNewsLetter = true,
+                    BookingHistory = new List<TicketBO>{
+                        new TicketBO() {
+                            TicketId = new Random().Next(10000),
+                            TheaterName = "AMC, South Barrington, IL",
+                            MovieName = "The Call",
+                            Screen = "12",
+                            NoOfPersons = 5,
+                            ShowDate = "15-Aug-2013",
+                            ShowTime = "4:30 PM"
+                        },
+                        new TicketBO() {
+                            TicketId = new Random().Next(10000),
+                            TheaterName = "Regal, Lincolnshire, IL",
+                            MovieName = "Argo",
+                            Screen = "7",
+                            NoOfPersons = 2,
+                            ShowDate = "25-Aug-2013",
+                            ShowTime = "7:00 PM"
+                        }
+                    }
+                },
+            new UserBO() {
+                    Address = "20627 Mauve Orchild Way, Dallas, TX",
+                    EmailId = "patrick.dcoster@email.com",
+                    FirstName = "Patrick",
+                    LastName = "DCoster",
+                    UserName = "username2",
+                    SubscribedForNewsLetter = false,
+                    BookingHistory = new List<TicketBO>{
+                        new TicketBO() {
+                            TicketId = new Random().Next(10000),
+                            TheaterName = "AMC Northpark, Northpark, Dallas, TX",
+                            MovieName = "Evil Dead",
+                            Screen = "19",
+                            NoOfPersons = 9,
+                            ShowDate = "13-July-2013",
+                            ShowTime = "4:30 PM"
+                        },
+                        new TicketBO() {
+                            TicketId = new Random().Next(10000),
+                            TheaterName = "Amstar 14, Dallas, TX",
+                            MovieName = "The Host",
+                            Screen = "21",
+                            NoOfPersons = 1,
+                            ShowDate = "21-Sept-2013",
+                            ShowTime = "5:00 PM"
+                        }
+                    }
+                }
+            };
+
+            return usersList.FirstOrDefault(x => x.UserName.Equals(userName));
+        }
     }
 }

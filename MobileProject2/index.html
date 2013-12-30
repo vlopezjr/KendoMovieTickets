@@ -17,14 +17,18 @@
             visibility: hidden;
         }
     </style>
-	<script src="cordova.js"></script>
+
+	<!--<script src="cordova.js"></script>-->
 	<script src="kendo/js/jquery.min.js"></script>
 	<script src="kendo/js/kendo.mobile.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 
-	
-	<script src="scripts/app.js"></script>
+    <script src="scripts/movie-tickets.js"></script>
 
+    <script>
+        
+        MovieTickets.main.initializeApp();
+    </script>
+    
 </head>
 <body>
 	<!--Home-->
@@ -59,11 +63,10 @@
         <!--Footer-->
         <div data-role="footer">
             <div data-role="tabstrip">
-                <a href="#mt-home-main-view" data-icon="home">Home</a>
-                <a href="#mt-about-view" data-icon="about">About</a>
-                <a href="#mt-trailers-view" data-icon="contacts">Trailers</a>
-                <a href="#tabstrip-fotos" data-icon="search">FOTOS</a>
-                <a href="#tabstrip-eventos" data-icon="globe">EVENTOS</a>
+                <a href="#mt-home-main-view" data-icon="home">Movies</a>                
+                <a href="Trailers.html" data-icon="contacts">Trailers</a>
+                <a href="/UserAccount.html" data-icon="gear">My Account</a>
+                <a href="#mt-about-view" data-icon="globe">About</a>
             </div>
         </div>
     </div>

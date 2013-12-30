@@ -25,5 +25,10 @@ namespace KendoMovieTickets.WebAPI.BLL
                 return moviesMasterList;
             }
         }
+
+        public static UserBO GetLoggedInUserDetails(string userName)
+        {
+            return MovieRepository.GetUserDetails(userName);
+        }
     }
 }

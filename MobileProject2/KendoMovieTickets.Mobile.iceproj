@@ -72,6 +72,21 @@
     <Content Include="kendo\styles\images\kendoui.woff" />
     <Content Include="kendo\styles\kendo.mobile.all.min.css" />
     <Content Include="scripts\app.js" />
+    <Content Include="scripts\common.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\configuration.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\data-access.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\movie-tickets.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\user-account.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="scripts\weather.js" />
     <Content Include="scripts\location.js" />
     <Content Include="scripts\login.js" />
@@ -100,6 +115,7 @@
       <TargetName>cordova.js</TargetName>
     </Content>
     <Content Include="Trailers.html" />
+    <Content Include="UserAccount.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Resources\" />
